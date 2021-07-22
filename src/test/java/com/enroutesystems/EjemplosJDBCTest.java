@@ -1,18 +1,14 @@
 package com.enroutesystems;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-
+import org.junit.jupiter.api.Test;
 import lombok.extern.slf4j.Slf4j;
+import java.sql.*;
 
 @Slf4j
-public class EjemplosJDBC {
-	public static void main(String[] args) {
+public class EjemplosJDBCTest {
+	
+	@Test
+	public void test() {
 		String connection ="jdbc:mysql://localhost:3306/employees";
 		try {
 			Connection con = DriverManager.getConnection(connection, "root", "root");
